@@ -17,6 +17,11 @@ header {
   margin-top: 24px;
 }
 
+/* ~ é um seletor de irmao ou irmandade */
+input[type="checkbox"]:checked ~ nav {
+  display: block;
+}
+
 nav {
   display: none;
 }
