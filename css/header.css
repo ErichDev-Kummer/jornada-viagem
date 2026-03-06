@@ -1,0 +1,27 @@
+header {
+  background-color: var(--background-terciary-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 38px 48px;
+}
+
+.logo {
+  width: 68px;
+  height: 64px;
+  display: inline-block;
+}
+
+.navigation-menu {
+  margin-top: 24px;
+}
+
+/* ~ é um seletor de irmao ou irmandade */
+input[type="checkbox"]:checked ~ nav {
+  display: block;
+}
+
+nav {
+  display: none;
+}
