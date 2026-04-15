@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-VariableFont_wght.ttf");
-  font-weight: normal;
+  font-weight: 100 900; /*agora funciona */
   font-display: swap;
 }
 
@@ -10,8 +10,8 @@
   --background-secondary-color: #f5f5f5;
   --background-terciary-color: #000000;
 
-  --button-primary-color: #8f0101;
-  --button-secondary-color: #b81515;
+  --primary-color: #8f0101;
+  --secondary-color: #b81515;
 
   --text-primary-color: #222222;
   --text-secondary-color: #ffffff;
@@ -46,4 +46,26 @@ button {
 
 body {
   font-family: "Montserrat", sans-serif;
+  color: var(--text-primary-color)
+}
+
+.section-title h2 {
+  font-size: 28px;
+  font-weight: var(--titles-weight);
+  margin: 0;
+  text-align: center;
+}
+
+.section-title hr {
+  width: 180px;
+  height: 4px;
+  background-color: var(--secondary-color);
+  border: none;
+  margin: 16px auto 32px;
+} 
+
+@media screen and (min-width: 768px) {
+  .section-title h2 {
+    font-size: 32px;
+  }
 }
