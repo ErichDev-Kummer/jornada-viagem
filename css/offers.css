@@ -62,9 +62,11 @@
 /* Telas Médias e Desktops (A partir de 768px) */
 @media screen and (min-width: 768px) {
   .offers-cards {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 24px;
   }
 
   .card {
@@ -90,8 +92,15 @@
 
 /* Telas Extra Grandes (A partir de 1440px) */
 @media screen and (min-width: 1440px) {
+  .offers-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+
   .card {
-    width: 588px;
+    width: 100%; /* O card preenche a coluna do Grid dinamicamente */
     height: 308px;
   }
 
@@ -101,9 +110,15 @@
 }
 
 /* Telas Extra Extra Grandes (A partir de 1920px) */
+/* Para telas de 1920px ou mais */
 @media screen and (min-width: 1920px) {
   .offers-cards {
-    width: 1250px;
+    display: grid;
+    grid-template-columns: repeat(2, 588px); /* Força EXATAMENTE 2 colunas de 588px */
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 1250px;
     margin: 0 auto;
   }
 }
