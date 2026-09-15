@@ -1,0 +1,106 @@
+/* ==========================================
+   CATEGORIES (SEÇÃO BUSQUE POR CATEGORIA)
+   ========================================== */
+
+/* Espaçamento superior de 88px referente ao Figma */
+.categories {
+  margin-top: 88px;
+  margin-bottom: 104px;
+}
+
+.categories .section-title {
+  width: 100%;
+}
+
+/* Quebra de linha do título visível no mobile */
+.break-mobile {
+  display: block;
+}
+
+/* Container dos Cards */
+.categories-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 64px;
+}
+
+/* Estilo Base dos Cards de Categoria */
+.categories-cards .card {
+  width: 312px;
+  height: 220px;
+  background-color: var(--background-secondary-color, #f4f4f4);
+  border-radius: 16px;
+  padding: 24px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: var(--text-primary-color, #000000);
+
+  /* Centralização perfeita (Eixo horizontal e vertical) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Centralização exata das imagens/ícones */
+.categories-cards .card img {
+  display: block;
+  margin: 0 auto 12px;
+}
+
+/* Ajustes finos de alinhamento vertical dos textos */
+.categories-cards .card.single-line {
+  padding-top: 24px; /* Mantém o padrão flex sem desalinhar */
+}
+
+.categories-cards .card.single-line.transfer img {
+  margin-bottom: 16px;
+}
+
+/* ==========================================
+   MEDIA QUERIES - RESPONSIVIDADE
+   ========================================== */
+
+/* Telas Médias e Tablets (A partir de 768px) */
+@media screen and (min-width: 768px) {
+  /* Esconde a quebra de linha do título no tablet/desktop */
+  .break-mobile {
+    display: none;
+  }
+
+  .categories-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  /* Largura fixa ajustada para espelhar o comportamento da seção Offers */
+  .categories-cards .card {
+    width: 320px;
+  }
+}
+
+/* Telas Grandes / Notebooks (A partir de 1024px) */
+@media screen and (min-width: 1024px) {
+  .categories-cards .card {
+    width: 430px;
+  }
+}
+
+/* Telas Extra Grandes (A partir de 1440px) */
+@media screen and (min-width: 1440px) {
+  .categories-cards .card {
+    width: 280px;
+  }
+}
+
+/* Telas Ultra Wide (A partir de 1920px) */
+@media screen and (min-width: 1920px) {
+  .categories-cards {
+    width: 1250px;
+    margin: 64px auto 0;
+  }
+}
