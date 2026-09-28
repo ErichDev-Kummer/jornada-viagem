@@ -1,0 +1,76 @@
+/* Estilização base (Mobile-first: Grid de 1 coluna) */
+.payments-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilização dos cards de pagamento */
+.payments-container .payment-card {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 24px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilização do banner/card lateral de métodos de pagamento */
+.payments-container .payment-banner.payment-methods {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Empurra o texto para cima e os ícones para baixo */
+  gap: 16px;
+  text-align: center;
+}
+
+/* Estilização do texto dentro do banner */
+.payments-container .payment-methods .content-text {
+  margin: 0;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Container interno para organizar os logotipos lado a lado */
+.payments-container .payment-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tamanho padronizado e responsivo para os logotipos das bandeiras e Pix/Boleto */
+.payments-container .payment-icons img {
+  width: 45px; /* Ajuste o tamanho caso precise de ícones maiores ou menores */
+  height: auto;
+  object-fit: contain;
+}
+
+/* Estilização para Desktop (a partir de 1024px) */
+@media (min-width: 1024px) {
+  .payments-container {
+    /* 3 colunas de tamanhos iguais */
+    grid-template-columns: repeat(3, 1fr);
+    /* 2 linhas automáticas para acomodar os cards */
+    grid-template-rows: repeat(2, auto);
+    gap: 24px;
+  }
+
+  /* O banner se estende verticalmente ocupando as 2 linhas da 3ª coluna */
+  .payment-banner.payment-methods {
+    grid-row: 1 / 3;
+    grid-column: 3;
+  }
+}
